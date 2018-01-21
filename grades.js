@@ -1,4 +1,5 @@
-/* Loop over an array of student grades (values from 50-100) and keep track of how many students get each grade in an object named grades.
+/* Loop over an array of student grades (values from 50-100) and keep track of how 
+many students get each grade in an object named grades.
 
 A score of 50-60 is an F
 A score of 61-70 is a D
@@ -24,7 +25,8 @@ for (let i = 0; i < scores.length; i++) {
 - [ ]How many of each grade? Accomplish this with a for..in loop.
 - [x]What is the lowest score? Sort the array and find out.
 - [x]What is the highest score?
-- [ ]Which grade had the most students achieve it? Use an if statment, and a currentGradeCount variable, in your for..in loop to see if the current grade's value is higher than the last one.
+- [ ]Which grade had the most students achieve it? Use an if statment, 
+and a currentGradeCount variable, in your for..in loop to see if the current grade's value is higher than the last one.
 - [ ]Which grade had the fewest students achieve it? */
 
 const scores = [82, 71, 62, 95, 55, 98, 69, 72, 78, 84, 64, 58, 87, 60]
@@ -37,27 +39,37 @@ let sortedScores = scores.sort(function(a, b) {
   console.log("Number of scores: ", s);
   console.log("The lowest score: ", sortedScores[0]);
   console.log("The highest score: ", sortedScores[s-1]);
+ 
 
-  
+const grades = {
+    A: 0,
+    B: 0,
+    C: 0,
+    D: 0,
+    F: 0,
+};
 
-
-  }
-}
-/*const grades = {
     for (let s = 0; s < scores.length; s++) {
         if (scores[s] >= 91) {
-           studenGrade = "A";
+           grades.A += 1;
+           console.log("how many A-grades? ", grades.A);  
         }else if (scores[s] <= 90 && scores[s] >= 81) {
-            studenGrade = "B";
+            grades.B += 1;
+            
         }else if (scores[s] <= 80 && scores[s] >= 71) {
-            studenGrade = "C";
+           grades.C += 1;
         }else if (scores[s] <= 70 && scores[s] >= 61) {
-            studenGrade = "D";
+            grades.D += 1;
         }else if (scores[s] <= 60 && scores[s] >= 51) {
-            studenGrade = "F";
-        }
+            grades.F += 1;
+        };
+        /*console.log("how many A-grades? ", grades.A);
+        console.log("how many B-grades? ", grades.B);
+        console.log("how many C-grades? ", grades.C);
+        console.log("how many D-grades? ", grades.D);*/
+        //console.log("how many F-grades? ", grades.F);
 
 
         
 
-// You'll need to change this line of code */
+// You'll need to change this line of code 
