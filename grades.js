@@ -32,7 +32,8 @@ and a currentGradeCount variable, in your for..in loop to see if the current gra
 const scores = [82, 71, 62, 95, 55, 98, 69, 72, 78, 84, 64, 58, 87, 60]
 
 let sortedScores = scores.sort(function(a, b) {
-  return a - b });
+  return a - b }
+);
   console.log("Ascending order scores: ", sortedScores);
   
   s = scores.length;
@@ -52,22 +53,53 @@ const grades = {
     for (let s = 0; s < scores.length; s++) {
         if (scores[s] >= 91) {
            grades.A += 1;
-           console.log("how many A-grades? ", grades.A);  
-        }else if (scores[s] <= 90 && scores[s] >= 81) {
+           
+
+          }else if (scores[s] <= 90 && scores[s] >= 81) {
             grades.B += 1;
             
-        }else if (scores[s] <= 80 && scores[s] >= 71) {
+
+          }else if (scores[s] <= 80 && scores[s] >= 71) {
            grades.C += 1;
-        }else if (scores[s] <= 70 && scores[s] >= 61) {
+           
+
+          }else if (scores[s] <= 70 && scores[s] >= 61) {
             grades.D += 1;
-        }else if (scores[s] <= 60 && scores[s] >= 51) {
+            
+
+          }else if (scores[s] <= 60 && scores[s] >= 51) {
             grades.F += 1;
-        };
-        /*console.log("how many A-grades? ", grades.A);
-        console.log("how many B-grades? ", grades.B);
-        console.log("how many C-grades? ", grades.C);
-        console.log("how many D-grades? ", grades.D);*/
-        //console.log("how many F-grades? ", grades.F);
+            
+          }    
+    };
+        
+    console.log("A-grades: ", grades.A);
+    console.log("B-grades: ", grades.B);
+    console.log("C-grades: ", grades.C);
+    console.log("D-grades: ", grades.D);
+    console.log("F-grades: ", grades.F);
+
+           
+        /*for (let s = 0; s < scores.length; s++) {
+            if (scores[s] >= 91) {
+               grades.A;
+               
+              }else if (scores[s] <= 90 && scores[s] >= 81) {
+                grades.B;
+                
+              }else if (scores[s] <= 80 && scores[s] >= 71) {
+               grades.C;
+              }else if (scores[s] <= 70 && scores[s] >= 61) {
+                grades.D;
+              }else if (scores[s] <= 60 && scores[s] >= 51) {
+                grades.F;
+              }
+           /* console.log("how many A-grades? ", grades.A += 1);
+            console.log("how many B-grades? ", grades.B += 1);
+            console.log("how many C-grades? ", grades.C += 1);
+            console.log("how many D-grades? ", grades.D += 1);
+            console.log("how many F-grades? ", grades.F += 1);
+            };*/
 
 
         
