@@ -30,7 +30,7 @@ and a currentGradeCount variable, in your for..in loop to see if the current gra
 - [ ]Which grade had the fewest students achieve it? */
 
 const scores = [82, 71, 62, 95, 55, 98, 69, 72, 78, 84, 64, 58, 87, 60]
-
+//sorts thescored in ascending order:
 let sortedScores = scores.sort(function(a, b) {
   return a - b }
 );
@@ -41,7 +41,7 @@ let sortedScores = scores.sort(function(a, b) {
   console.log("The lowest score: ", sortedScores[0]);
   console.log("The highest score: ", sortedScores[s-1]);
  
-
+//created an object named grades:
 const grades = {
     A: 0,
     B: 0,
@@ -49,7 +49,7 @@ const grades = {
     D: 0,
     F: 0,
 };
-
+//counts the number of students for each grades and adds to the values in the Grades object key.
     for (let s = 0; s < scores.length; s++) {
         if (scores[s] >= 91) {
            grades.A += 1;
@@ -72,12 +72,14 @@ const grades = {
             
           }    
     };
-        
+  // How many of each grade? 
     console.log("A-grades: ", grades.A);
     console.log("B-grades: ", grades.B);
     console.log("C-grades: ", grades.C);
     console.log("D-grades: ", grades.D);
     console.log("F-grades: ", grades.F);
+
+  
 
            
         /*for (let s = 0; s < scores.length; s++) {
@@ -94,7 +96,7 @@ const grades = {
               }else if (scores[s] <= 60 && scores[s] >= 51) {
                 grades.F;
               }
-           /* console.log("how many A-grades? ", grades.A += 1);
+          /* console.log("how many A-grades? ", grades.A += 1);
             console.log("how many B-grades? ", grades.B += 1);
             console.log("how many C-grades? ", grades.C += 1);
             console.log("how many D-grades? ", grades.D += 1);
