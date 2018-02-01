@@ -22,12 +22,12 @@ for (let i = 0; i < scores.length; i++) {
 
 /* Use console.log() to output the following criteria to the browser console.
 
-- [ ]How many of each grade? Accomplish this with a for..in loop.
+- [x]How many of each grade? Accomplish this with a for..in loop.
 - [x]What is the lowest score? Sort the array and find out.
 - [x]What is the highest score?
-- [ ]Which grade had the most students achieve it? Use an if statment, 
-and a currentGradeCount variable, in your for..in loop to see if the current grade's value is higher than the last one.
-- [ ]Which grade had the fewest students achieve it? */
+- [x]Which grade had the most students achieve it? Use an if statment, and a currentGradeCount variable, 
+     in your for..in loop to see if the current grade's value is higher than the last one.
+- [x]Which grade had the fewest students achieve it? */
 
 const scores = [82, 71, 62, 95, 55, 98, 69, 72, 78, 84, 64, 58, 87, 60]
  
@@ -107,6 +107,7 @@ let sortedScores = scores.sort(function(a, b) {
         mostFrequent.push(x);
     }
     
+//Which grade had the fewest students achieve it? */
     if (grades[x] < newGradeCount) {
         leastFrequent = [x];
         newGradeCount = grades[x];
@@ -115,8 +116,10 @@ let sortedScores = scores.sort(function(a, b) {
         }
  
  }
- console.log("least frequent", leastFrequent);
+
  console.log("most frequent", mostFrequent);
+ console.log("least frequent", leastFrequent);
+ 
 
     
         
