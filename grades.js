@@ -97,8 +97,7 @@ let sortedScores = scores.sort(function(a, b) {
  var currentGradeCount = 0;
  var mostFrequent = []; 
  
- var newGradeCount = 100;
- var leastFrequent = [];
+ 
  for (var x in grades) {
     if (grades[x] > currentGradeCount) {
         mostFrequent = [x];
@@ -108,6 +107,8 @@ let sortedScores = scores.sort(function(a, b) {
     }
     
 //Which grade had the fewest students achieve it? */
+var newGradeCount = 100;
+ var leastFrequent = [];
     if (grades[x] < newGradeCount) {
         leastFrequent = [x];
         newGradeCount = grades[x];
