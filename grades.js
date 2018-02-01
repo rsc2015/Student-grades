@@ -22,24 +22,14 @@ for (let i = 0; i < scores.length; i++) {
 
 /* Use console.log() to output the following criteria to the browser console.
 
-- [ ]How many of each grade? Accomplish this with a for..in loop.
+- [x]How many of each grade? Accomplish this with a for..in loop.
 - [x]What is the lowest score? Sort the array and find out.
 - [x]What is the highest score?
-- [ ]Which grade had the most students achieve it? Use an if statment, 
-and a currentGradeCount variable, in your for..in loop to see if the current grade's value is higher than the last one.
-- [ ]Which grade had the fewest students achieve it? */
+- [x]Which grade had the most students achieve it? Use an if statment, and a currentGradeCount variable, 
+     in your for..in loop to see if the current grade's value is higher than the last one.
+- [x]Which grade had the fewest students achieve it? */
 
 const scores = [82, 71, 62, 95, 55, 98, 69, 72, 78, 84, 64, 58, 87, 60]
-//sorts thescored in ascending order:
-let sortedScores = scores.sort(function(a, b) {
-  return a - b }
-);
-  console.log("Ascending order scores: ", sortedScores);
-  
-  s = scores.length;
-  console.log("Number of scores: ", s);
-  console.log("The lowest score: ", sortedScores[0]);
-  console.log("The highest score: ", sortedScores[s-1]);
  
 //created an object named grades:
 const grades = {
@@ -48,62 +38,89 @@ const grades = {
     C: 0,
     D: 0,
     F: 0,
-};
+    
+  };
+
 //counts the number of students for each grades and adds to the values in the Grades object key.
     for (let s = 0; s < scores.length; s++) {
         if (scores[s] >= 91) {
-           grades.A += 1;
+         grades.A += 1;
+           
            
 
           }else if (scores[s] <= 90 && scores[s] >= 81) {
-            grades.B += 1;
+             grades.B += 1;
             
 
           }else if (scores[s] <= 80 && scores[s] >= 71) {
-           grades.C += 1;
+            grades.C += 1;
            
 
           }else if (scores[s] <= 70 && scores[s] >= 61) {
-            grades.D += 1;
+             grades.D += 1;
             
 
           }else if (scores[s] <= 60 && scores[s] >= 51) {
-            grades.F += 1;
+             grades.F += 1;
+
+            
             
           }    
+          
+
     };
+
   // How many of each grade? 
+
     console.log("A-grades: ", grades.A);
     console.log("B-grades: ", grades.B);
     console.log("C-grades: ", grades.C);
     console.log("D-grades: ", grades.D);
     console.log("F-grades: ", grades.F);
 
+    console.log(grades);
+
+    //sorts thescored in ascending order:
+let sortedScores = scores.sort(function(a, b) {
+  //console.log (a, b)
+;  return a - b }
+);
+  console.log("Ascending order scores: ", sortedScores);
   
+  s = scores.length;
+  console.log("Number of scores: ", s);
+  console.log("The lowest score: ", sortedScores[0]);
+  console.log("The highest score: ", sortedScores[s-1]);
+    
 
-           
-        /*for (let s = 0; s < scores.length; s++) {
-            if (scores[s] >= 91) {
-               grades.A;
-               
-              }else if (scores[s] <= 90 && scores[s] >= 81) {
-                grades.B;
-                
-              }else if (scores[s] <= 80 && scores[s] >= 71) {
-               grades.C;
-              }else if (scores[s] <= 70 && scores[s] >= 61) {
-                grades.D;
-              }else if (scores[s] <= 60 && scores[s] >= 51) {
-                grades.F;
-              }
-          /* console.log("how many A-grades? ", grades.A += 1);
-            console.log("how many B-grades? ", grades.B += 1);
-            console.log("how many C-grades? ", grades.C += 1);
-            console.log("how many D-grades? ", grades.D += 1);
-            console.log("how many F-grades? ", grades.F += 1);
-            };*/
+ ////for loop for finding the grade most students achieved.   
+ var currentGradeCount = 0;
+ var mostFrequent = []; 
+ 
+ var newGradeCount = 100;
+ var leastFrequent = [];
+ for (var x in grades) {
+    if (grades[x] > currentGradeCount) {
+        mostFrequent = [x];
+        currentGradeCount = grades[x];
+    } else if (grades[x] === currentGradeCount){
+        mostFrequent.push(x);
+    }
+    
+//Which grade had the fewest students achieve it? */
+    if (grades[x] < newGradeCount) {
+        leastFrequent = [x];
+        newGradeCount = grades[x];
+        } else if (grades[x] === newGradeCount) {
+            leastFrequent.push(x);
+        }
+ 
+ }
 
+ console.log("most frequent", mostFrequent);
+ console.log("least frequent", leastFrequent);
+ 
 
+    
         
 
-// You'll need to change this line of code 
